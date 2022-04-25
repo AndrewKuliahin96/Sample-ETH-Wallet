@@ -1,72 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <data>
-
-    </data>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <EditText
+        android:id="@+id/address"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Enter your wallet address" />
 
-        <EditText
-            android:id="@+id/address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="20dp"
-            android:hint="Enter your wallet address" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Enter your password"
+        android:textColor="@color/colorBlack" />
 
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:hint="Enter your password"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:textColor="@color/colorBlack" />
+    <TextView
+        android:id="@+id/privateKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp" />
 
-        <TextView
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/privateKey"/>
+    <Button
+        android:id="@+id/copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_bg"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="copy"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
 
-        <Button
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/copy"
-            android:layout_gravity="center"
-            android:text="copy"
-            android:visibility="invisible"
-            android:background="@drawable/rounded_bg"
-            android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/white"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-        <Button
-            android:layout_marginBottom="40dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_marginRight="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Export private key"
-            android:background="@drawable/rounded_bg"
-            android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/white"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/rounded_bg"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Export private key"
+        android:textColor="@color/white" />
 
-</layout>
+</LinearLayout>

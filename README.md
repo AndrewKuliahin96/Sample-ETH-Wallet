@@ -51,4 +51,3 @@ This app demonstrates wallet features which contains examples of:
 
 #### Send ERC20 Token
 <img src="https://centerprime.technology/static/images/github/ethereum android/send_erc20_token.png">
-

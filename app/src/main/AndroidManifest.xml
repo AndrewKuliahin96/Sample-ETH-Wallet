@@ -2,73 +2,67 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.centerprimesampleethsdk">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/icenter_prime_logo"
+        android:icon="@mipmap/ic_launcher"
         android:label="CenterPrime Ethereum Wallet Sample"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                    android:screenOrientation="portrait"/>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:screenOrientation="portrait" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateWalletActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-             />
+            android:name=".create_wallet.CreateWalletActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".ImportWalletFromKeyStoreActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:name=".import_wallet_from_keystore.ImportWalletFromKeyStoreActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <activity
-            android:name=".CheckBalanceActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:name=".check_balance.CheckBalanceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ExportKeyStoreActivity"
+            android:name=".export_keystore.ExportKeyStoreActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ImportByPrivateKeyActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:name=".import_by_private_key.ImportByPrivateKeyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ExportPrivateKeyActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:name=".export_private_key.ExportPrivateKeyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".SendEthActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:name=".send_eth.SendEthActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".CheckERCTokenBalanceActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:name=".erc_token_balance.CheckERCTokenBalanceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".SendERCTokenActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:name=".send_erc_token.SendERCTokenActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
